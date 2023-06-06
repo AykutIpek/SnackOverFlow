@@ -1,5 +1,5 @@
 //
-//  FacebookButton.swift
+//  EmailButton.swift
 //  SnackOverFlow
 //
 //  Created by aykut ipek on 6.06.2023.
@@ -7,12 +7,7 @@
 
 import SwiftUI
 
-
-private enum StringItems: String{
-    case facebookLogin = "Sign In with Facebook"
-}
-
-struct FacebookButton: View {
+struct EmailButton: View {
     var onTap: () -> Void
     
     var body: some View {
@@ -20,24 +15,23 @@ struct FacebookButton: View {
             
         } label: {
             HStack {
-                Image(IconItems.Social.facebook.rawValue)
-                Text(LocaleKeys.Auth.facebook.rawValue.locale())
+                Spacer()
+                Text(LocaleKeys.Auth.custom.rawValue.locale())
                 Spacer()
             }
             .tint(.white)
-            .font(.title3)
+            .font(.system(size: FontSizes.headline, weight: .semibold))
             .padding(.all, PagePadding.All.normal.rawValue)
         }
             .buttonBorderShape(.roundedRectangle)
             .controlSize(.large)
-            .background(Color.deepSkyBlue)
+            .background(Color.peach)
             .cornerRadius(RadiusItems.radius)
     }
 }
 
-
-struct FacebookView_Previews: PreviewProvider {
+struct EmailButton_Previews: PreviewProvider {
     static var previews: some View {
-        FacebookButton(onTap: {})
+        EmailButton(onTap: {})
     }
 }

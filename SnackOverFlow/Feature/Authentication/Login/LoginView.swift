@@ -17,7 +17,7 @@ struct LoginView: View {
                 .foregroundColor(.teflon)
             HTextField(hint: LocaleKeys.General.emailHint.rawValue.locale(), iconName: IconItems.mail)
             HSecureTextField(hint: LocaleKeys.General.passwordHint.rawValue.locale(), iconName: IconItems.lock).padding(.top, PagePadding.All.normal.rawValue)
-            Divider()
+            Divider().padding(.top, PagePadding.All.normal.rawValue)
             NormalButton(onTap: {
                 
             }, title: LocaleKeys.Login.createAccount.rawValue).padding(.top, PagePadding.All.normal.rawValue)

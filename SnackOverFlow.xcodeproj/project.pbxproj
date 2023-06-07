@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E97B144D2A30C7D1009E61BB /* TextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97B144C2A30C7D1009E61BB /* TextFieldModifiers.swift */; };
 		E9A6669B2A2F53E0008AAF37 /* SnackOverFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6669A2A2F53E0008AAF37 /* SnackOverFlowApp.swift */; };
 		E9A6669D2A2F53E0008AAF37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6669C2A2F53E0008AAF37 /* ContentView.swift */; };
 		E9A6669F2A2F53E1008AAF37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A6669E2A2F53E1008AAF37 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		E9C3976F2A3093DA006365C0 /* NormalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C3976E2A3093DA006365C0 /* NormalButton.swift */; };
 		E9C397712A309CF9006365C0 /* OnboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C397702A309CF9006365C0 /* OnboardModel.swift */; };
 		E9C397732A30A282006365C0 /* ViewSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C397722A30A282006365C0 /* ViewSize.swift */; };
+		E9C397762A30B275006365C0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C397752A30B275006365C0 /* LoginView.swift */; };
 		E9CFFAD02A2F782900831ABC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9CFFACF2A2F782900831ABC /* Localizable.strings */; };
 		E9CFFAD22A2F793400831ABC /* LocalKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CFFAD12A2F793400831ABC /* LocalKeys.swift */; };
 		E9CFFAD62A2F7BA300831ABC /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CFFAD52A2F7BA300831ABC /* GoogleButton.swift */; };
@@ -37,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E97B144C2A30C7D1009E61BB /* TextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifiers.swift; sourceTree = "<group>"; };
 		E9A666972A2F53E0008AAF37 /* SnackOverFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnackOverFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A6669A2A2F53E0008AAF37 /* SnackOverFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackOverFlowApp.swift; sourceTree = "<group>"; };
 		E9A6669C2A2F53E0008AAF37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		E9C3976E2A3093DA006365C0 /* NormalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalButton.swift; sourceTree = "<group>"; };
 		E9C397702A309CF9006365C0 /* OnboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardModel.swift; sourceTree = "<group>"; };
 		E9C397722A30A282006365C0 /* ViewSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSize.swift; sourceTree = "<group>"; };
+		E9C397752A30B275006365C0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E9CFFACF2A2F782900831ABC /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E9CFFAD12A2F793400831ABC /* LocalKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalKeys.swift; sourceTree = "<group>"; };
 		E9CFFAD52A2F7BA300831ABC /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
@@ -78,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E97B144B2A30C7C3009E61BB /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				E97B144C2A30C7D1009E61BB /* TextFieldModifiers.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
 		E9A6668E2A2F53E0008AAF37 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +131,7 @@
 		E9A666A82A2F584C008AAF37 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E97B144B2A30C7C3009E61BB /* ViewModifiers */,
 				E9CFFAE42A2F90F200831ABC /* Fonts */,
 				E9CFFACE2A2F780100831ABC /* Locale */,
 				E9A666B82A2F611B008AAF37 /* Extension */,
@@ -162,6 +175,7 @@
 		E9A666AD2A2F5948008AAF37 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				E9C397742A30B264006365C0 /* Login */,
 				E9C3976B2A308F96006365C0 /* Onboarding */,
 				E9A666AC2A2F5940008AAF37 /* Welcome */,
 			);
@@ -228,6 +242,14 @@
 				E9C397702A309CF9006365C0 /* OnboardModel.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E9C397742A30B264006365C0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E9C397752A30B275006365C0 /* LoginView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		E9CFFACE2A2F780100831ABC /* Locale */ = {
@@ -333,7 +355,9 @@
 				E9CFFAD82A2F7D3700831ABC /* Custom+EdgeInsets.swift in Sources */,
 				E9A6669D2A2F53E0008AAF37 /* ContentView.swift in Sources */,
 				E9A666B72A2F5E17008AAF37 /* Images.swift in Sources */,
+				E9C397762A30B275006365C0 /* LoginView.swift in Sources */,
 				E9A666BC2A2F61FA008AAF37 /* Icons.swift in Sources */,
+				E97B144D2A30C7D1009E61BB /* TextFieldModifiers.swift in Sources */,
 				E9C397712A309CF9006365C0 /* OnboardModel.swift in Sources */,
 				E9CFFAE12A2F8F1A00831ABC /* DividerViewSize.swift in Sources */,
 				E9CFFAE62A2F910000831ABC /* FontSizes.swift in Sources */,

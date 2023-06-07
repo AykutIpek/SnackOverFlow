@@ -12,5 +12,16 @@
 "signUpWithEmail" = "Sign Up with Email";
 
 
-
+// Button
 "getStarted" = "Get Started";
+"createAccount" = "Create Account";
+"termsAndCondition" = "By clicking \"Create account\", I agree to SnackOverflow’s [TOS](www.com.vb) and [Privacy Policy](www.com.vb2).";
+
+// Login
+"welcomeBack" = "Welcome Back!";
+
+
+// General
+"emailHint" = "Write your email";
+"passwordHint" = "Write your password";
+

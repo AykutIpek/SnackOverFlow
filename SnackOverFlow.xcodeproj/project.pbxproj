@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E97B144D2A30C7D1009E61BB /* TextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97B144C2A30C7D1009E61BB /* TextFieldModifiers.swift */; };
+		E98111782A31BD76009DC898 /* OnboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98111772A31BD76009DC898 /* OnboardViewModel.swift */; };
+		E981117B2A31BFE5009DC898 /* UserCacheItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E981117A2A31BFE5009DC898 /* UserCacheItems.swift */; };
 		E9A6669B2A2F53E0008AAF37 /* SnackOverFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6669A2A2F53E0008AAF37 /* SnackOverFlowApp.swift */; };
 		E9A6669D2A2F53E0008AAF37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6669C2A2F53E0008AAF37 /* ContentView.swift */; };
 		E9A6669F2A2F53E1008AAF37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A6669E2A2F53E1008AAF37 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		E97B144C2A30C7D1009E61BB /* TextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifiers.swift; sourceTree = "<group>"; };
+		E98111772A31BD76009DC898 /* OnboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewModel.swift; sourceTree = "<group>"; };
+		E981117A2A31BFE5009DC898 /* UserCacheItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCacheItems.swift; sourceTree = "<group>"; };
 		E9A666972A2F53E0008AAF37 /* SnackOverFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnackOverFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A6669A2A2F53E0008AAF37 /* SnackOverFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackOverFlowApp.swift; sourceTree = "<group>"; };
 		E9A6669C2A2F53E0008AAF37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +94,14 @@
 			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
+		E98111792A31BFD7009DC898 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				E981117A2A31BFE5009DC898 /* UserCacheItems.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		E9A6668E2A2F53E0008AAF37 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +143,7 @@
 		E9A666A82A2F584C008AAF37 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E98111792A31BFD7009DC898 /* Cache */,
 				E97B144B2A30C7C3009E61BB /* ViewModifiers */,
 				E9CFFAE42A2F90F200831ABC /* Fonts */,
 				E9CFFACE2A2F780100831ABC /* Locale */,
@@ -240,6 +253,7 @@
 			children = (
 				E9C3976C2A308FA6006365C0 /* OnboardView.swift */,
 				E9C397702A309CF9006365C0 /* OnboardModel.swift */,
+				E98111772A31BD76009DC898 /* OnboardViewModel.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -367,6 +381,7 @@
 				E9CFFAD22A2F793400831ABC /* LocalKeys.swift in Sources */,
 				E9CFFADC2A2F7FD700831ABC /* Radius.swift in Sources */,
 				E9A666AF2A2F5978008AAF37 /* WelcomeView.swift in Sources */,
+				E981117B2A31BFE5009DC898 /* UserCacheItems.swift in Sources */,
 				E9C3976D2A308FA6006365C0 /* OnboardView.swift in Sources */,
 				E9C3976F2A3093DA006365C0 /* NormalButton.swift in Sources */,
 				E9CFFADA2A2F7D8300831ABC /* PagePadding.swift in Sources */,
@@ -374,6 +389,7 @@
 				E9A666C22A2F6F94008AAF37 /* EdgeInsets.swift in Sources */,
 				E9C397732A30A282006365C0 /* ViewSize.swift in Sources */,
 				E9A6669B2A2F53E0008AAF37 /* SnackOverFlowApp.swift in Sources */,
+				E98111782A31BD76009DC898 /* OnboardViewModel.swift in Sources */,
 				E9CFFAE82A2F957D00831ABC /* DynamicSize+GeometryProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

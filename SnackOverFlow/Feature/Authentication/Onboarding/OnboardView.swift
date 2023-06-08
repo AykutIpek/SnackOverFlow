@@ -9,39 +9,51 @@ import SwiftUI
 
 struct OnboardView: View {
     @State private var currentIndex: Int = 0
-    
+    @StateObject var onboardViewModel = OnboardViewModel()
     /// Dummy List Count
     /// - Returns: Total Item Count Without Last Item
     private func count() -> Int {
         OnboardModel.items.count - 1
     }
     var body: some View {
-        GeometryReader { geometry in
-            VStack{
-                Spacer()
-                TabView(selection: $currentIndex) {
-                    ForEach(0...count(), id: \.self) { value in
-                        SliderCard(imageHeight: geometry.dh(height: 0.45), model: OnboardModel.items[value])
-                    }
-                }
-                .tabViewStyle(.page(indexDisplayMode: .never))
-                .frame(height: geometry.dh(height: 0.6))
-                Spacer()
-                HStack{
-                    ForEach((0...count()), id: \.self) { index in
-                        if(index == currentIndex){
-                            IndicatorRectangle(width: geometry.dw(width: 0.06))
-                        }else{
-                            IndicatorRectangle(width: geometry.dw(width: 0.02))
+        NavigationStack {
+            GeometryReader { geometry in
+                VStack{
+                    Spacer()
+                    TabView(selection: $onboardViewModel.currentIndex) {
+                        ForEach(0...count(), id: \.self) { value in
+                            SliderCard(imageHeight: geometry.dh(height: 0.45), model: OnboardModel.items[value])
                         }
                     }
-                }.frame(height: ViewSize.indicator)
-                
-                NormalButton(onTap: {
-                    
-                }, title: LocaleKeys.Buttons.getStarted.rawValue)
-                .padding(.all, PagePadding.All.normal.rawValue)
+                    .tabViewStyle(.page(indexDisplayMode: .never))
+                    .frame(height: geometry.dh(height: 0.6))
+                    Spacer()
+                    HStack{
+                        ForEach((0...count()), id: \.self) { index in
+                            if(index == onboardViewModel.currentIndex){
+                                IndicatorRectangle(width: geometry.dw(width: 0.06))
+                            }else{
+                                IndicatorRectangle(width: geometry.dw(width: 0.02))
+                            }
+                        }
+                    }.frame(height: ViewSize.indicator)
+
+                    NavigationLink {
+                        WelcomeView()
+                            .toolbar(.hidden)
+                            .ignoresSafeArea(.all)
+                    } label: {
+                        NormalButton(onTap: {
+                            onboardViewModel.saveUserLoginAndRedirect()
+                        }, title: LocaleKeys.Buttons.getStarted.rawValue)
+                        .padding(.all, PagePadding.All.normal.rawValue)
+                    }.onAppear{
+                        onboardViewModel.checkUserFirstTime()
+                    }
+                }
             }
+        }.navigationDestination(isPresented: $onboardViewModel.isHomeRedirect) {
+            WelcomeView()
         }
     }
 }
